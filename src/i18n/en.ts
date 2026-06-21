@@ -120,7 +120,7 @@ export const en = {
   },
   footer: {
     name: "Keryms Deyanira Garcia Reyes",
-    copyright: "QA Engineer Portfolio. Built with technical precision.",
+    copyright: "Building quality with technical precision.",
     linkedin: "LinkedIn",
     email: "Email",
   },
