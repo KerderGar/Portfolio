@@ -1,0 +1,60 @@
+---
+import { getTranslation, getProjectTranslation, type Locale } from "../../i18n";
+import CaseStudyCard from "./CaseStudyCard.astro";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = getTranslation(locale);
+const pt = getProjectTranslation(locale);
+
+const projectKeys = ["fintech-flexibility-payment-platform", "mobile-web-digital-wallet-platform", "identity-licensing-multi-tenant-administration", "government-content-management-citizen-workflows"] as const;
+
+const iconMap: Record<string, string> = {
+  "fintech-flexibility-payment-platform": "payments",
+  "mobile-web-digital-wallet-platform": "smartphone",
+  "identity-licensing-multi-tenant-administration": "corporate_fare",
+  "government-content-management-citizen-workflows": "account_balance",
+};
+
+const accentMap: Record<string, "primary" | "secondary"> = {
+  "fintech-flexibility-payment-platform": "primary",
+  "mobile-web-digital-wallet-platform": "secondary",
+  "identity-licensing-multi-tenant-administration": "primary",
+  "government-content-management-citizen-workflows": "secondary",
+};
+
+const caseStudies = projectKeys.map((key) => {
+  const p = pt.projects[key];
+  return {
+    type: p.type,
+    title: p.title,
+    slug: key,
+    tech: p.methodologies,
+    challenge: p.challenge,
+    approach: p.approach,
+    impact: p.impact,
+    icon: iconMap[key],
+    accentColor: accentMap[key],
+  };
+});
+---
+
+<section class="py-xl px-margin-mobile md:px-margin-desktop" id="projects">
+  <div class="max-w-[1280px] mx-auto">
+    <div class="flex items-center gap-sm mb-lg">
+      <span class="h-[1px] w-12 bg-primary"></span>
+      <h2 class="font-label-md text-label-md tracking-widest text-primary uppercase">
+        {t.projects.title}
+      </h2>
+    </div>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+      {caseStudies.map((study) => (
+        <CaseStudyCard study={study} locale={locale} />
+      ))}
+    </div>
+  </div>
+</section>

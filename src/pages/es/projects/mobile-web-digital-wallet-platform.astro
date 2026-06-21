@@ -1,0 +1,24 @@
+---
+import ProjectLayout from "../../../layouts/ProjectLayout.astro";
+import "../../../styles/global.css";
+
+const tech = ["JMeter", "SonarCloud", "Azure DevOps", "Jira", "Documentation"];
+const methodologies = ["Agile", "Scrum", "Pruebas Móviles", "Pruebas de Rendimiento", "Revisión de Documentación"];
+---
+
+<ProjectLayout
+  locale="es"
+  title="Mobile & Web Digital Wallet Platform"
+  projectType="Solución de Pagos Móvil y Web Financiera Regulada"
+  tech={tech}
+  challenge="Un ecosistema de pagos digitales requería procesos de QA altamente estructurados, benchmarking de rendimiento y trazas estrictas de auditoría de despliegue para cumplir con requisitos regulatorios financieros estrictos."
+  approach={[
+    "Validación Móvil y Web: Redacción de documentación QA integral, planes de prueba y diseños de matrices adaptados tanto para flujos de transacciones móviles como web.",
+    "Benchmarking de Rendimiento: Diseño y ejecución de pruebas de carga usando JMeter apuntando a APIs centrales de procesamiento de pagos y endpoints de autenticación para localizar cuellos de botella del sistema.",
+    "Análisis Estático de Código: Aprovechamiento de análisis estático SonarCloud para aplicar puertas de código de alta calidad, mitigando deuda técnica antes de liberaciones de build.",
+    "Cumplimiento Regulatorio: Validación de documentación de despliegue y listas de verificación estrictas de liberación para asegurar cumplimiento fluido con auditorías operativas internas y externas.",
+    "Gestión de Pruebas Ágil: Seguimiento de requisitos, bugs y velocidad de sprint usando Jira y Azure DevOps dentro de un entorno Agile Scrum.",
+  ]}
+  impact="Cero defectos críticos en producción durante un período de despliegue continuo de 6 meses. Mejora exitosa del rendimiento de API de pagos en 35% después de identificar cuellos de botella arquitectónicos vía JMeter, mientras se pasaba 100% de auditorías financieras internas y externas."
+  methodologies={methodologies}
+/>

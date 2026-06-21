@@ -1,0 +1,30 @@
+---
+import ProjectLayout from "../../../layouts/ProjectLayout.astro";
+import "../../../styles/global.css";
+
+const tech = ["JMeter", "Azure DevOps", "SQL", "Postman", "Scrum"];
+const p = {
+  type: "Plataforma Gubernamental",
+  title: "Government Content Management & Citizen Workflow Systems",
+  challenge: "Plataformas públicas de gran escala incluyendo gestión de documentos/legislación y entornos de flujos de trabajo de quejas ciudadanas requerían QA end-to-end a través de flujos de estado complejos.",
+  approach: [
+    "Certificación de flujos de estado complejos (envío, asignación de coordinador, seguimiento de investigación de campo)",
+    "Validación de triggers automatizados de notificaciones por correo y validaciones precisas de exportación de datos",
+    "Aseguramiento de estándares de accesibilidad y UI/UX en portales públicos y de administración interna",
+    "Pruebas de reportes dinámicos PDF y exportaciones Excel para datos legislativos y administrativos",
+  ],
+  impact: "Tasa de completitud de flujos de trabajo mejoró 45% después de validación de seguimiento de estado. Precisión de notificaciones por correo alcanzó 99.8%. Todos los portales públicos pasaron cumplimiento de accesibilidad WCAG y estándares de UI/UX gubernamentales.",
+  methodologies: ["Agile", "Cumplimiento Gubernamental", "Validación de Flujos de Trabajo", "Pruebas de Accesibilidad", "Validación de Exportación de Datos"],
+};
+---
+
+<ProjectLayout
+  locale="es"
+  title={p.title}
+  projectType={p.type}
+  tech={tech}
+  challenge={p.challenge}
+  approach={p.approach}
+  impact={p.impact}
+  methodologies={p.methodologies}
+/>

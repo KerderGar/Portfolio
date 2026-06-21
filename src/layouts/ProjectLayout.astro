@@ -1,0 +1,112 @@
+---
+import Layout from "./Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import { getTranslation, getProjectTranslation, type Locale } from "../i18n";
+
+interface Props {
+  locale: Locale;
+  title: string;
+  projectType: string;
+  tech: string[];
+  image?: string;
+  challenge: string;
+  approach: string[];
+  impact: string;
+  methodologies: string[];
+}
+
+const { locale, title, projectType, tech, image, challenge, approach, impact, methodologies } = Astro.props;
+const t = getTranslation(locale);
+const pt = getProjectTranslation(locale);
+---
+
+<Layout locale={locale} title={`${title} | ${t.footer.name}`}>
+  <Navbar locale={locale} />
+  <main class="pixel-grid pt-xl">
+    <section class="py-xl px-margin-mobile md:px-margin-desktop">
+      <div class="max-w-[1280px] mx-auto">
+        <!-- Back link -->
+        <a href={`/${locale}/`} class="inline-flex items-center gap-xs text-on-surface-variant hover:text-primary transition-colors mb-lg font-label-md">
+          <span class="material-symbols-outlined">arrow_back</span>
+          {pt.backToPortfolio}
+        </a>
+
+        <!-- Project Header -->
+        <div class="mb-lg">
+          <span class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-xs block">{projectType}</span>
+          <h1 class="font-display text-display text-on-surface mb-sm">{title}</h1>
+        </div>
+
+        <!-- Image -->
+        {image && (
+          <div class="relative rounded-xl overflow-hidden mb-lg h-[400px] border border-outline-variant/30">
+            <img src={image} alt={title} class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+          </div>
+        )}
+
+        <!-- Tech Stack -->
+        <div class="flex flex-wrap gap-xs mb-lg">
+          {tech.map((t) => (
+            <span class="px-sm py-1 bg-surface-container border border-outline-variant rounded-full font-label-sm text-label-sm text-on-surface-variant">{t}</span>
+          ))}
+        </div>
+
+        <!-- Methodologies -->
+        <div class="mb-lg">
+          <h2 class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-sm">
+            {pt.methodologies}
+          </h2>
+          <div class="flex flex-wrap gap-xs">
+            {methodologies.map((m) => (
+              <span class="px-sm py-1 bg-primary/10 border border-primary/30 rounded-full font-label-sm text-label-sm text-primary">{m}</span>
+            ))}
+          </div>
+        </div>
+
+        <!-- The Challenge -->
+        <div class="mb-lg glass-card p-lg rounded-xl">
+          <h2 class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-sm">
+            {pt.theChallenge}
+          </h2>
+          <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">{challenge}</p>
+        </div>
+
+        <!-- My Approach -->
+        <div class="mb-lg glass-card p-lg rounded-xl">
+          <h2 class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-sm">
+            {pt.myApproach}
+          </h2>
+          <ul class="space-y-sm">
+            {approach.map((item) => (
+              <li class="flex items-start gap-sm">
+                <span class="w-2 h-2 bg-secondary rounded-full mt-2 shrink-0"></span>
+                <span class="font-body-lg text-body-lg text-on-surface-variant">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- The Impact -->
+        <div class="mb-lg glass-card p-lg rounded-xl border border-primary/30">
+          <h2 class="font-label-md text-label-md text-primary uppercase tracking-wider mb-sm">
+            {pt.theImpact}
+          </h2>
+          <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">{impact}</p>
+        </div>
+
+        <!-- NDA Badge -->
+        <div class="flex justify-center mb-xl">
+          <div class="inline-flex items-center gap-xs px-md py-sm rounded-full border border-outline-variant/30 bg-surface-container">
+            <span class="material-symbols-outlined text-on-surface-variant">lock</span>
+            <span class="font-label-md text-label-md text-on-surface-variant">
+              {pt.ndaProtected}
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer locale={locale} />
+</Layout>

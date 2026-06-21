@@ -1,0 +1,25 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Hero from "../../components/Hero.astro";
+import About from "../../components/About.astro";
+import Skills from "../../components/Skills.astro";
+import Experience from "../../components/Experience.astro";
+import CaseStudies from "../../components/case-studies/CaseStudies.astro";
+import ContactCTA from "../../components/ContactCTA.astro";
+import Footer from "../../components/Footer.astro";
+import "../../styles/global.css";
+---
+
+<Layout locale="en">
+  <Navbar locale="en" />
+  <main class="pixel-grid pt-xl">
+    <Hero locale="en" />
+    <About locale="en" />
+    <Skills locale="en" />
+    <Experience locale="en" />
+    <CaseStudies locale="en" />
+    <ContactCTA locale="en" />
+  </main>
+  <Footer locale="en" />
+</Layout>

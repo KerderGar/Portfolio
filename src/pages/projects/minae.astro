@@ -1,0 +1,23 @@
+---
+import ProjectLayout from "../../layouts/ProjectLayout.astro";
+import "../../styles/global.css";
+
+const tech = ["JMeter", "Azure DevOps", "SQL", "Postman", "Documentation"];
+const methodologies = ["Agile", "Government Compliance", "Workflow Validation", "Accessibility Testing", "Data Export Validation"];
+---
+
+<ProjectLayout
+  locale="en"
+  title="Government Content Management & Citizen Workflow Systems"
+  projectType="Government Platform"
+  tech={tech}
+  challenge="High-scale public sector platforms including document/legislation management and public citizen complaint workflow environments required end-to-end QA across complex status workflows."
+  approach={[
+    "Certified complex status workflows (submission, coordinator assignment, field investigation tracking)",
+    "Validated automated email notification triggers and precise data export validations",
+    "Ensured accessibility and UI/UX standards across public-facing and internal administration portals",
+    "Tested dynamic PDF reports and Excel exports for legislative and administrative data",
+  ]}
+  impact="Workflow completion rate improved by 45% after status tracking validation. Email notification accuracy reached 99.8%. All public-facing portals passed WCAG accessibility compliance and government UI/UX standards."
+  methodologies={methodologies}
+/>

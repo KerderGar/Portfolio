@@ -1,0 +1,69 @@
+---
+import { getProjectTranslation, type Locale } from "../../i18n";
+
+interface CaseStudy {
+  type: string;
+  title: string;
+  tech: string[];
+  challenge: string;
+  approach: string[];
+  impact: string;
+  icon: string;
+  accentColor: "primary" | "secondary";
+  slug: string;
+}
+
+interface Props {
+  study: CaseStudy;
+  locale: Locale;
+}
+
+const { study, locale } = Astro.props;
+const pt = getProjectTranslation(locale);
+const accentBorder = study.accentColor === "primary" ? "border-primary/30" : "border-secondary/30";
+const accentText = study.accentColor === "primary" ? "text-primary" : "text-secondary";
+const accentBadge = study.accentColor === "primary" ? "border-primary/30 text-primary" : "border-secondary/30 text-secondary";
+---
+
+<article class={`group relative glass-card rounded-xl overflow-hidden border ${accentBorder} hover:shadow-2xl hover:shadow-${study.accentColor}/10 transition-all duration-500`}>
+  <div class={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-${study.accentColor} to-transparent opacity-0 group-hover:opacity-60 transition-opacity duration-500`}></div>
+  
+  <div class="p-lg flex flex-col h-full">
+    <!-- Header -->
+    <div class="mb-sm">
+      <div class="flex items-center justify-between mb-xs">
+        <span class={`font-label-sm text-label-sm uppercase tracking-widest ${accentText}`}>
+          {study.type}
+        </span>
+        <span class={`material-symbols-outlined ${accentText} text-3xl`} style="font-variation-settings: 'FILL' 1;">
+          {study.icon}
+        </span>
+      </div>
+      <h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-${study.accentColor} transition-colors duration-300">
+        {study.title}
+      </h3>
+    </div>
+
+    <!-- Tech Stack -->
+    <div class="flex flex-wrap gap-xs mb-sm">
+      {study.tech.slice(0, 4).map((t) => (
+        <span class={`px-sm py-1 border rounded-full font-label-sm text-label-sm ${accentBadge} bg-surface-container/50`}>
+          {t}
+        </span>
+      ))}
+    </div>
+
+    <!-- Short Challenge -->
+    <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-sm line-clamp-2">
+      {study.challenge}
+    </p>
+
+    <!-- Link to full page -->
+    <div class="mt-auto pt-sm border-t border-outline-variant/20">
+      <a href={`${locale === 'es' ? '/es' : ''}/projects/${study.slug}/`} class={`inline-flex items-center gap-xs font-label-md text-label-md ${accentText} hover:underline transition-all`}>
+        <span>{pt.viewCaseStudy}</span>
+        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+      </a>
+    </div>
+  </div>
+</article>

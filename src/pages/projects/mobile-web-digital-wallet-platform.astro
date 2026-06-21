@@ -1,0 +1,24 @@
+---
+import ProjectLayout from "../../layouts/ProjectLayout.astro";
+import "../../styles/global.css";
+
+const tech = ["JMeter", "SonarCloud", "Azure DevOps", "Jira", "Documentation"];
+const methodologies = ["Agile", "Scrum", "Mobile Testing", "Performance Testing", "Documentation Review"];
+---
+
+<ProjectLayout
+  locale="en"
+  title="Mobile & Web Digital Wallet Platform"
+  projectType="Regulated Financial Mobile & Web Payment Solution"
+  tech={tech}
+  challenge="A digital payment ecosystem required highly structured QA processes, performance benchmarking, and strict deployment audit trails to comply with stringent financial regulatory requirements."
+  approach={[
+    "Mobile & Web Validation: Authored comprehensive QA documentation, test plans, and matrix designs tailored for both mobile and web transaction flows.",
+    "Performance Benchmarking: Designed and executed load testing using JMeter targeting core payment processing APIs and authentication endpoints to locate system bottlenecks.",
+    "Static Code Analysis: Leveraged SonarCloud static analysis to enforce high-quality code gates, mitigating technical debt prior to build releases.",
+    "Regulatory Compliance: Validated deployment documentation and strict release checklists to ensure seamless compliance with internal and external operational audits.",
+    "Agile Test Management: Tracked requirements, bugs, and sprint velocity using Jira and Azure DevOps within an Agile Scrum environment.",
+  ]}
+  impact="Achieved zero critical defects in production over a 6-month continuous deployment period. Successfully boosted payment API performance by 35% after identifying architectural bottlenecks via JMeter, while passing 100% of internal and external financial audits."
+  methodologies={methodologies}
+/>

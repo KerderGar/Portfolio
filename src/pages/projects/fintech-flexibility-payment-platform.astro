@@ -1,0 +1,23 @@
+---
+import ProjectLayout from "../../layouts/ProjectLayout.astro";
+import "../../styles/global.css";
+
+const tech = ["JMeter", "SonarCloud", "SonarQube", "Azure DevOps", "Jira"];
+const methodologies = ["Agile", "Scrum", "Test Documentation", "Code Quality Review", "Performance Testing"];
+---
+
+<ProjectLayout
+  locale="en"
+  title="FinTech Flexibility Payment Platform & Quality Gates"
+  projectType="High-Volume Financial Services Web Application"
+  tech={tech}
+  challenge="A core flexible payment platform for a major financial group required rigorous QA documentation, strict deployment audit compliance, and comprehensive performance validation under high transactional volumes."
+  approach={[
+    "Audit & Deployment Compliance: Designed comprehensive QA test plans and formal deployment documentation to fulfill strict financial audit requirements for production releases.",
+    "Static Code Analysis: Implemented and managed SonarQube and SonarCloud quality gates to systematically identify technical debt and vulnerabilities before production launches.",
+    "Performance Engineering: Executed rigorous load and stress testing using JMeter to validate core backend API response times under concurrent transaction peaks.",
+    "Agile Collaboration: Maintained full traceability and sprint management within Jira and Azure DevOps under the Scrum framework.",
+  ]}
+  impact="Achieved 100% audit compliance across all production releases. Successfully reduced post-deployment incidents by 45% through proactive SonarQube quality gates and stabilized API response times under 500ms during peak load cycles."
+  methodologies={methodologies}
+/>

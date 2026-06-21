@@ -1,0 +1,23 @@
+---
+import ProjectLayout from "../../../layouts/ProjectLayout.astro";
+import "../../../styles/global.css";
+
+const tech = ["JMeter", "Azure DevOps", "Azure AD", "SignalR", "JWT", "CI/CD"];
+const methodologies = ["Agile", "Scrum", "Pruebas Multi-inquilino", "Validación de Tokens de Seguridad", "Pruebas de Características en Tiempo Real", "Gestión de Pipelines CI/CD"];
+---
+
+<ProjectLayout
+  locale="es"
+  title="Identity, Licensing & Multi-Tenant Administration Platforms"
+  projectType="Plataforma Empresarial"
+  tech={tech}
+  challenge="Plataformas de ecosistema empresarial central que gestionan autenticación (Azure AD/SSO, OTP), ciclos de vida de licencias de software (compra, activación, renovación) y portales administrativos requerían QA riguroso en entornos multi-inquilino."
+  approach={[
+    "Verificación de entornos multi-inquilino complejos con permisos de roles de usuario y tokens de seguridad (JWT con rotación de refresh)",
+    "Pruebas de integración con Microsoft Graph para sincronización de identidad y directorio empresarial",
+    "Validación de características en tiempo real usando SignalR para notificaciones en vivo y flujos de trabajo colaborativos",
+    "Ejecución de pruebas de rendimiento con JMeter para endpoints de autenticación y licencias de API",
+  ]}
+  impact="99.9% de tiempo de actividad en servicios de autenticación a través de despliegues multi-inquilino. Reducción de 80% en fallos de activación de licencias mediante mejoras de validación JWT y tokens. Latencia de características en tiempo real mejoró 60% después de optimización de SignalR."
+  methodologies={methodologies}
+/>

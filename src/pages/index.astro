@@ -1,0 +1,23 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting...</title>
+  </head>
+  <body>
+    <script>
+      (function() {
+        const navLang = navigator.language || navigator.userLanguage || 'es';
+        const lang = navLang.toLowerCase().startsWith('en') ? 'en' : 'es';
+        window.location.replace('/' + lang + '/');
+      })();
+    </script>
+    <noscript>
+      <meta http-equiv="refresh" content="0; url=/es/" />
+    </noscript>
+  </body>
+</html>

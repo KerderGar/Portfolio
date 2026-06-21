@@ -1,0 +1,23 @@
+---
+import ProjectLayout from "../../layouts/ProjectLayout.astro";
+import "../../styles/global.css";
+
+const tech = ["JMeter", "Azure DevOps", "Azure AD", "SignalR", "JWT", "CI/CD"];
+const methodologies = ["Agile", "Scrum", "Multi-Tenant Testing", "Security Token Validation", "Real-Time Feature Testing", "CI/CD Pipeline Management"];
+---
+
+<ProjectLayout
+  locale="en"
+  title="Identity, Licensing & Multi-Tenant Administration Platforms"
+  projectType="Enterprise Business Platform"
+  tech={tech}
+  challenge="Core enterprise ecosystem platforms managing authentication (Azure AD/SSO, OTP), software licensing lifecycles (purchase, activation, renewal), and administrative portals required rigorous QA across multi-tenant environments."
+  approach={[
+    "Verified complex multi-tenant environments with user role permissions and security tokens (JWT with refresh rotation)",
+    "Tested integration with Microsoft Graph for enterprise identity and directory synchronization",
+    "Validated real-time features using SignalR for live notifications and collaborative workflows",
+    "Executed performance testing with JMeter for authentication and licensing API endpoints",
+  ]}
+  impact="Achieved 99.9% uptime on authentication services across multi-tenant deployments. Reduced license activation failures by 80% through JWT and token validation improvements. Real-time feature latency improved by 60% after SignalR optimization."
+  methodologies={methodologies}
+/>

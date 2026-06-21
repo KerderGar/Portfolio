@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Keryms Deyanira Garcia Reyes | QA Engineer Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-variant": "#273647",
+                      "surface-container-highest": "#273647",
+                      "on-error-container": "#ffdad6",
+                      "on-primary-fixed-variant": "#5516be",
+                      "tertiary": "#bec6e0",
+                      "on-primary-fixed": "#23005c",
+                      "outline-variant": "#494454",
+                      "tertiary-fixed": "#dae2fd",
+                      "tertiary-fixed-dim": "#bec6e0",
+                      "surface-tint": "#d0bcff",
+                      "inverse-primary": "#6d3bd7",
+                      "background": "#051424",
+                      "surface": "#051424",
+                      "inverse-on-surface": "#233143",
+                      "surface-bright": "#2c3a4c",
+                      "on-tertiary-fixed": "#131b2e",
+                      "surface-container-high": "#1c2b3c",
+                      "on-surface": "#d4e4fa",
+                      "secondary": "#fbabff",
+                      "on-background": "#d4e4fa",
+                      "surface-container": "#122131",
+                      "outline": "#958ea0",
+                      "secondary-fixed": "#ffd6fd",
+                      "primary-fixed": "#e9ddff",
+                      "surface-dim": "#051424",
+                      "secondary-container": "#ae05c6",
+                      "on-tertiary-container": "#22293d",
+                      "on-tertiary-fixed-variant": "#3f465c",
+                      "tertiary-container": "#8990a8",
+                      "surface-container-lowest": "#010f1f",
+                      "error-container": "#93000a",
+                      "error": "#ffb4ab",
+                      "on-secondary-container": "#ffd8fd",
+                      "on-secondary-fixed": "#36003e",
+                      "surface-container-low": "#0d1c2d",
+                      "primary": "#d0bcff",
+                      "on-tertiary": "#283044",
+                      "on-secondary": "#580065",
+                      "on-surface-variant": "#cbc3d7",
+                      "on-secondary-fixed-variant": "#7c008e",
+                      "on-error": "#690005",
+                      "primary-fixed-dim": "#d0bcff",
+                      "secondary-fixed-dim": "#fbabff",
+                      "on-primary": "#3c0091",
+                      "on-primary-container": "#340080",
+                      "primary-container": "#a078ff",
+                      "inverse-surface": "#d4e4fa"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-desktop": "64px",
+                      "base": "4px",
+                      "sm": "16px",
+                      "gutter": "24px",
+                      "xl": "80px",
+                      "xs": "8px",
+                      "lg": "48px",
+                      "md": "24px",
+                      "margin-mobile": "16px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Hanken Grotesk"],
+                      "display": ["Hanken Grotesk"],
+                      "label-sm": ["JetBrains Mono"],
+                      "body-lg": ["Geist"],
+                      "body-md": ["Geist"],
+                      "label-md": ["JetBrains Mono"],
+                      "headline-lg": ["Hanken Grotesk"],
+                      "headline-lg-mobile": ["Hanken Grotesk"]
+              },
+              "fontSize": {
+                      "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                      "display": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "label-sm": ["12px", {"lineHeight": "1.4", "letterSpacing": "0.08em", "fontWeight": "500"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                      "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            background-color: #051424;
+            color: #d4e4fa;
+        }
+        .glass-card {
+            background: rgba(39, 54, 71, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(149, 142, 160, 0.2);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            border-color: #fbabff;
+            background: rgba(174, 5, 198, 0.05);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #d0bcff 0%, #fbabff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .pixel-grid {
+            background-image: radial-gradient(rgba(208, 188, 255, 0.1) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .hero-glow {
+            background: radial-gradient(circle at 50% 50%, rgba(160, 120, 255, 0.15) 0%, transparent 70%);
+        }
+    </style>
+</head>
+<body class="font-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center max-w-[1280px] mx-auto px-margin-desktop py-4">
+<div class="font-label-md text-label-md font-bold tracking-tighter text-secondary dark:text-secondary">
+                QA_ENGINEER_PORTFOLIO
+            </div>
+<div class="hidden md:flex gap-md">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#about">About</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#skills">Skills</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#experience">Experience</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#projects">Projects</a>
+</div>
+<button class="bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md px-md py-xs rounded transition-all">
+                Contact Me
+            </button>
+</div>
+</nav>
+<main class="pixel-grid pt-xl">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center justify-center px-margin-mobile md:px-margin-desktop hero-glow overflow-hidden">
+<div class="max-w-[1280px] w-full grid grid-cols-1 md:grid-cols-12 gap-md items-center">
+<div class="md:col-span-7 z-10">
+<div class="inline-block px-sm py-1 bg-secondary-container/20 border border-secondary/30 rounded-full mb-md">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Available for New Challenges</span>
+</div>
+<h1 class="font-display text-display mb-sm leading-none">
+                        Keryms Deyanira <br/>
+<span class="text-gradient">Garcia Reyes</span>
+</h1>
+<p class="font-headline-md text-headline-md text-on-surface-variant mb-lg max-w-2xl">
+                        Quality Assurance Engineer | Test Automation &amp; Manual Testing | API &amp; Performance | CI/CD
+                    </p>
+<div class="flex flex-wrap gap-md">
+<button class="bg-primary text-on-primary font-label-md text-label-md px-lg py-sm rounded transition-transform hover:scale-105">
+                            View Project Logs
+                        </button>
+<button class="border border-primary text-primary font-label-md text-label-md px-lg py-sm rounded hover:bg-primary/10 transition-colors">
+                            Biography
+                        </button>
+</div>
+</div>
+<div class="md:col-span-5 relative flex justify-center items-center">
+<div class="relative w-80 h-96">
+<div class="absolute inset-0 border-2 border-secondary/40 -translate-x-4 translate-y-4"></div>
+<div class="absolute inset-0 bg-surface-container-high overflow-hidden border border-outline-variant/50">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A professional portrait of a Hispanic woman in her early thirties, appearing confident and intelligent. She is wearing a smart blazer in a dark navy blue, set against a blurred high-tech workspace background with soft violet and magenta ambient light trails. The lighting is sophisticated and directional, highlighting her features with a clean, modern aesthetic that matches a high-end technical portfolio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPNZcQl0p-o0aH3cVXlK6WPL3pZAXy8ltV4mRR2oYo08hcDARyJP87CnpwpP-CKnJHExwsjzQsTrYTdp7AgiXcqB1jpQwGjjsNNWmJNkHX9K_QD-zFuHBwfl0pjIlvUZ493ccrIHlIJeqtdgiqONYp3U4qrSWHhKMV1bP4qGWdxKx4VpUZLtohFo4SOHAHcMNKYiDZJ6a5XoSyc4ybrOO47130ppzA3v-K63_tu7wrdMg-8Qybj8f87RWRALxnDvhGkOc9EHuFDok"/>
+</div>
+<div class="absolute -bottom-8 -right-8 w-32 h-32 bg-secondary/10 backdrop-blur-md border border-secondary/20 flex flex-col items-center justify-center">
+<span class="font-display text-headline-lg text-secondary">8+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">YEARS XP</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Me Section -->
+<section class="py-xl px-margin-mobile md:px-margin-desktop bg-surface-container-lowest/50" id="about">
+<div class="max-w-[1280px] mx-auto">
+<div class="flex flex-col md:flex-row gap-lg items-center">
+<div class="md:w-1/3">
+<h2 class="font-headline-lg text-headline-lg mb-sm">Building the <br/><span class="text-gradient">Blueprint</span> <br/>of Reliability</h2>
+</div>
+<div class="md:w-2/3">
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                            I am a dedicated Quality Assurance professional specializing in the orchestration of complex testing architectures. My approach transcends simple bug detection; I engineer systems of reliability that ensure software integrity from commit to production. By blending manual intuition with automated precision, I help teams deliver high-performance applications that stand the test of scale and user demand.
+                        </p>
+<div class="mt-lg grid grid-cols-2 md:grid-cols-4 gap-md">
+<div class="border-l-2 border-primary pl-md">
+<p class="font-label-md text-label-md text-primary">0%</p>
+<p class="font-label-sm text-label-sm">Critical Leakage</p>
+</div>
+<div class="border-l-2 border-secondary pl-md">
+<p class="font-label-md text-label-md text-secondary">95%</p>
+<p class="font-label-sm text-label-sm">Test Coverage</p>
+</div>
+<div class="border-l-2 border-primary pl-md">
+<p class="font-label-md text-label-md text-primary">40%</p>
+<p class="font-label-sm text-label-sm">Efficiency Gain</p>
+</div>
+<div class="border-l-2 border-secondary pl-md">
+<p class="font-label-md text-label-md text-secondary">100+</p>
+<p class="font-label-sm text-label-sm">API Endpoints</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Stack -->
+<section class="py-xl px-margin-mobile md:px-margin-desktop" id="skills">
+<div class="max-w-[1280px] mx-auto">
+<div class="flex items-center gap-sm mb-lg">
+<span class="h-[1px] w-12 bg-primary"></span>
+<h2 class="font-label-md text-label-md tracking-widest text-primary uppercase">Technical Stack</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-md">
+<!-- Automation -->
+<div class="glass-card p-md rounded-lg">
+<div class="flex items-center gap-xs mb-sm">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">robot_2</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Automation</h3>
+</div>
+<ul class="space-y-xs font-body-md text-on-surface-variant">
+<li class="flex items-center gap-xs"><span class="w-1 h-1 bg-secondary rounded-full"></span> Selenium WebDriver</li>
+<li class="flex items-center gap-xs"><span class="w-1 h-1 bg-secondary rounded-full"></span> Playwright / Cypress</li>
+<li class="flex items-center gap-xs"><span class="w-1 h-1 bg-secondary rounded-full"></span> Appium (Mobile)</li>
+<li class="flex items-center gap-xs"><span class="w-1 h-1 bg-secondary rounded-full"></span> Java / Python / JS</li>
+</ul>
+</div>
+<!-- Performance -->
+<div class="glass-card p-md rounded-lg">
+<div class="flex items-center gap-xs mb-sm">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">speed</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Performance</h3>
+</div>
+<ul class="space-y-xs font-body-md text-on-surface-variant">
+<li class="flex items-center gap-xs"><span class="w-1 h-1 bg-secondary rounded-full"></span> JMeter</li>
+<li class="flex items-center gap-xs"><span class="w-1 h-1 bg-secondary rounded-full"></span> K6 Load Testing</li>
+<li class="flex items-center gap-xs"><span class="w-1 h-1 bg-secondary rounded-full"></span> Postman / Rest Assured</li>
+<li class="flex items-center gap-xs"><span class="w-1 h-1 bg-secondary rounded-full"></span> Grafana Monitoring</li>
+</ul>
+</div>
+<!-- DevOps -->
+<div class="glass-card p-md rounded-lg">
+<div class="flex items-center gap-xs mb-sm">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">terminal</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">DevOps</h3>
+</div>
+<ul class="space-y-xs font-body-md text-on-surface-variant">
+<li class="flex items-center gap-xs"><span class="w-1 h-1 bg-secondary rounded-full"></span> Jenkins Pipelines</li>
+<li class="flex items-center gap-xs"><span class="w-1 h-1 bg-secondary rounded-full"></span> GitHub Actions</li>
+<li class="flex items-center gap-xs"><span class="w-1 h-1 bg-secondary rounded-full"></span> Docker &amp; Kubernetes</li>
+<li class="flex items-center gap-xs"><span class="w-1 h-1 bg-secondary rounded-full"></span> AWS / Azure DevOps</li>
+</ul>
+</div>
+<!-- Methodologies -->
+<div class="glass-card p-md rounded-lg">
+<div class="flex items-center gap-xs mb-sm">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">account_tree</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Methods</h3>
+</div>
+<ul class="space-y-xs font-body-md text-on-surface-variant">
+<li class="flex items-center gap-xs"><span class="w-1 h-1 bg-secondary rounded-full"></span> BDD / TDD</li>
+<li class="flex items-center gap-xs"><span class="w-1 h-1 bg-secondary rounded-full"></span> Agile Scrum / Kanban</li>
+<li class="flex items-center gap-xs"><span class="w-1 h-1 bg-secondary rounded-full"></span> Risk-Based Testing</li>
+<li class="flex items-center gap-xs"><span class="w-1 h-1 bg-secondary rounded-full"></span> Root Cause Analysis</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Professional Trajectory -->
+<section class="py-xl px-margin-mobile md:px-margin-desktop bg-surface-container-low/30" id="experience">
+<div class="max-w-[1280px] mx-auto">
+<div class="flex items-center gap-sm mb-lg">
+<span class="h-[1px] w-12 bg-secondary"></span>
+<h2 class="font-label-md text-label-md tracking-widest text-secondary uppercase">Professional Trajectory</h2>
+</div>
+<div class="space-y-lg">
+<!-- Exp 1 -->
+<div class="relative pl-lg border-l border-outline-variant/50 pb-lg">
+<div class="absolute -left-[5px] top-0 w-2 h-2 bg-primary rounded-full ring-4 ring-primary/20"></div>
+<div class="flex flex-col md:flex-row md:justify-between md:items-start mb-sm">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Senior QA Automation Lead</h3>
+<p class="font-label-md text-label-md text-primary">Global Tech Solutions Inc.</p>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-sm py-1 rounded">2021 — PRESENT</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+                            Spearheading the QA digital transformation by implementing a modular automation framework that reduced regression cycles from 5 days to 4 hours. Managing a cross-functional team of 8 QA engineers across three time zones.
+                        </p>
+</div>
+<!-- Exp 2 -->
+<div class="relative pl-lg border-l border-outline-variant/50 pb-lg">
+<div class="absolute -left-[5px] top-0 w-2 h-2 bg-outline rounded-full"></div>
+<div class="flex flex-col md:flex-row md:justify-between md:items-start mb-sm">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">SDET Engineer</h3>
+<p class="font-label-md text-label-md text-primary">Finovate Systems</p>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-sm py-1 rounded">2018 — 2021</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+                            Designed and executed performance test strategies for high-volume banking APIs using JMeter and Azure Monitor. Reduced production incidents by 30% through improved pre-release validation.
+                        </p>
+</div>
+<!-- Exp 3 -->
+<div class="relative pl-lg border-l border-outline-variant/50">
+<div class="absolute -left-[5px] top-0 w-2 h-2 bg-outline rounded-full"></div>
+<div class="flex flex-col md:flex-row md:justify-between md:items-start mb-sm">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Junior QA Tester</h3>
+<p class="font-label-md text-label-md text-primary">StartUp Lab</p>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-high px-sm py-1 rounded">2016 — 2018</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+                            Established first formal QA processes for a scaling mobile application. Performed extensive manual exploratory testing and began the transition to automated smoke suites.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Selected QA Architectures (Bento Grid) -->
+<section class="py-xl px-margin-mobile md:px-margin-desktop" id="projects">
+<div class="max-w-[1280px] mx-auto">
+<div class="flex items-center justify-between mb-lg">
+<div class="flex items-center gap-sm">
+<span class="h-[1px] w-12 bg-primary"></span>
+<h2 class="font-label-md text-label-md tracking-widest text-primary uppercase">Selected QA Architectures</h2>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Project 1 -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl h-[400px]">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-40" data-alt="A futuristic dashboard UI showing complex data visualizations, network graphs, and real-time performance metrics. The screen is filled with glowing violet and magenta lines of code and diagrams, reflecting on a polished dark glass surface. The atmosphere is professional, technical, and immersive, evoking the feeling of a high-end command center." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9QXjgYkZ7Ds9sMYztDg9yXBwbOW2Ueiu8w0RQE9vlxaV0TMW_GRptFATM0zeLOj-eVKzVCVv_KxE-O3nm1eKfMO-wnZSe_GMF-wViGfvCWCzO0plBtxIVOlMI5HcM8PavFthxg2dyFPfjiKNau_lWYnYfGupbTbkxdKBrAzqofqkun1dIneAWwQwfv_75ZdejtHkBFfsiMhDq7i2TZsIyBlQl2QjOPaz-aTanirSR1VGx4DdUIR651iHOaIpc4bNR_MdwHP506zw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent p-lg flex flex-col justify-end">
+<span class="font-label-sm text-label-sm text-secondary mb-xs">Automation Framework</span>
+<h3 class="font-headline-lg text-headline-lg mb-sm">End-to-End Scalability Hub</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl mb-md">
+                                A custom-built Playwright framework supporting parallel execution across 50+ concurrent browsers with integrated reporting.
+                            </p>
+<div class="flex gap-xs">
+<span class="px-sm py-1 bg-surface-container border border-outline-variant rounded font-label-sm text-label-sm">Playwright</span>
+<span class="px-sm py-1 bg-surface-container border border-outline-variant rounded font-label-sm text-label-sm">Node.js</span>
+<span class="px-sm py-1 bg-surface-container border border-outline-variant rounded font-label-sm text-label-sm">Docker</span>
+</div>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl h-[400px] border border-outline-variant/30 bg-surface-container-low">
+<div class="p-lg h-full flex flex-col">
+<div class="mb-auto">
+<span class="material-symbols-outlined text-primary text-4xl mb-md">query_stats</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-sm">Performance Benchmark Tool</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                                    Internal tool for automated load testing of microservices using k6 and Prometheus.
+                                </p>
+</div>
+<div class="flex flex-wrap gap-xs mt-md">
+<span class="px-sm py-1 bg-surface-variant/30 border border-primary/20 rounded font-label-sm text-label-sm text-primary">k6</span>
+<span class="px-sm py-1 bg-surface-variant/30 border border-primary/20 rounded font-label-sm text-label-sm text-primary">Grafana</span>
+</div>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl h-[400px] border border-outline-variant/30 bg-surface-container-high">
+<div class="p-lg h-full flex flex-col">
+<div class="mb-auto">
+<span class="material-symbols-outlined text-secondary text-4xl mb-md">integration_instructions</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-sm">API Validation Shield</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                                    Comprehensive Postman collection for 200+ endpoints with automated schema validation.
+                                </p>
+</div>
+<div class="flex flex-wrap gap-xs mt-md">
+<span class="px-sm py-1 bg-surface-variant/30 border border-secondary/20 rounded font-label-sm text-label-sm text-secondary">Postman</span>
+<span class="px-sm py-1 bg-surface-variant/30 border border-secondary/20 rounded font-label-sm text-label-sm text-secondary">Newman</span>
+</div>
+</div>
+</div>
+<!-- Project 4 -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl h-[400px]">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-30" data-alt="A clean, minimalist server room with illuminated blue and magenta server racks. The image uses a shallow depth of field, focusing on a single rack's blinking status lights. The aesthetic is extremely sharp, conveying a sense of high availability, infrastructure stability, and technical precision suited for a professional QA engineer." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU5ZSRPMsmBLOyRyEwYv4Fxx3nSkExIA_pe6pTm28j7yHp5shDkMwKgKnCZLmuaLyWaeD6KUeMwAXNocKj_S_c-a3Ax5QFUHhl4OVq7b8zv3Y5aMLWo3VhqbSkHdhX1JYgVq36EY_xAnFfTiDXI9R7iIPZZd4zjV9dl_Gw4C7sJxloqVGq9Zz3RAPdNaI26DzggIcr0yavWZHOIY7B6BMMYXTUHkZYAOL4OTAkWBpsYdv63H5vloj4CjW7eds_Vt-EiwROpBLWRpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent p-lg flex flex-col justify-end">
+<span class="font-label-sm text-label-sm text-primary mb-xs">CI/CD Integration</span>
+<h3 class="font-headline-lg text-headline-lg mb-sm">Quality Gate Pipeline</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl mb-md">
+                                Automated deployment pipeline that enforces quality gates based on static analysis and dynamic testing results.
+                            </p>
+<div class="flex gap-xs">
+<span class="px-sm py-1 bg-surface-container border border-outline-variant rounded font-label-sm text-label-sm">Jenkins</span>
+<span class="px-sm py-1 bg-surface-container border border-outline-variant rounded font-label-sm text-label-sm">SonarQube</span>
+<span class="px-sm py-1 bg-surface-container border border-outline-variant rounded font-label-sm text-label-sm">Groovy</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="py-xl px-margin-mobile md:px-margin-desktop bg-gradient-to-br from-surface-container-lowest to-surface">
+<div class="max-w-[800px] mx-auto text-center">
+<h2 class="font-headline-lg text-headline-lg mb-md">Ready to Elevate Your <br/><span class="text-gradient">Quality Standards?</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg">
+                    Whether you're building a new product or looking to modernize your testing infrastructure, I can help you achieve rock-solid reliability.
+                </p>
+<div class="flex justify-center gap-md">
+<a class="bg-primary text-on-primary font-label-md text-label-md px-lg py-sm rounded-lg hover:shadow-lg hover:shadow-primary/20 transition-all" href="mailto:contact@keryms.qa">
+                        Initiate Connection
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant/20">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop py-lg gap-md max-w-[1280px] mx-auto">
+<div class="font-label-md text-label-md text-on-surface">
+                Keryms Deyanira Garcia Reyes
+            </div>
+<div class="font-label-sm text-label-sm text-secondary dark:text-secondary text-center md:text-left">
+                © 2024 QA Engineer Portfolio. Built with technical precision.
+            </div>
+<div class="flex gap-md">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="#">LinkedIn</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="#">GitHub</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="#">Email</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="#">Resume</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll interaction for header
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2');
+                nav.classList.remove('py-4');
+                nav.classList.add('bg-surface/95');
+            } else {
+                nav.classList.add('py-4');
+                nav.classList.remove('py-2');
+                nav.classList.remove('bg-surface/95');
+            }
+        });
+
+        // Hover effect for skill cards
+        const cards = document.querySelectorAll('.glass-card');
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body></html>

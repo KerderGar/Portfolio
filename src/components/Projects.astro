@@ -1,0 +1,78 @@
+---
+import { getTranslation, type Locale } from "../i18n";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = getTranslation(locale);
+const images = [
+  "https://lh3.googleusercontent.com/aida-public/AB6AXuA9QXjgYkZ7Ds9sMYztDg9yXBwbOW2Ueiu8w0RQE9vlxaV0TMW_GRptFATM0zeLOj-eVKzVCVv_KxE-O3nm1eKfMO-wnZSe_GMF-wViGfvCWCzO0plBtxIVOlMI5HcM8PavFthxg2dyFPfjiKNau_lWYnYfGupbTbkxdKBrAzqofqkun1dIneAWwQwfv_75ZdejtHkBFfsiMhDq7i2TZsIyBlQl2QjOPaz-aTanirSR1VGx4DdUIR651iHOaIpc4bNR_MdwHP506zw",
+  null,
+  null,
+  "https://lh3.googleusercontent.com/aida-public/AB6AXuCU5ZSRPMsmBLOyRyEwYv4Fxx3nSkExIA_pe6pTm28j7yHp5shDkMwKgKnCZLmuaLyWaeD6KUeMwAXNocKj_S_c-a3Ax5QFUHhl4OVq7b8zv3Y5aMLWo3VhqbSkHdhX1JYgVq36EY_xAnFfTiDXI9R7iIPZZd4zjV9dl_Gw4C7sJxloqVGq9Zz3RAPdNaI26DzggIcr0yavWZHOIY7B6BMMYXTUHkZYAOL4OTAkWBpsYdv63H5vloj4CjW7eds_Vt-EiwROpBLWRpg",
+];
+---
+
+<section class="py-xl px-margin-mobile md:px-margin-desktop" id="projects">
+  <div class="max-w-[1280px] mx-auto">
+    <div class="flex items-center justify-between mb-lg">
+      <div class="flex items-center gap-sm">
+        <span class="h-[1px] w-12 bg-primary"></span>
+        <h2 class="font-label-md text-label-md tracking-widest text-primary uppercase">{t.projects.title}</h2>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+      {t.projects.items.map((project, index) => {
+        const isImage = images[index] !== null;
+        const isLarge = index === 0 || index === 3;
+        const isAccent = index === 0 || index === 3 ? 'primary' : 'secondary';
+        if (isImage) {
+          return (
+            <div class={`md:col-span-8 group relative overflow-hidden rounded-xl h-[400px]`}>
+              <img
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-40"
+                alt={project.name}
+                src={images[index]}
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent p-lg flex flex-col justify-end">
+                <span class={`font-label-sm text-label-sm text-${isAccent} mb-xs`}>{project.category}</span>
+                <h3 class="font-headline-lg text-headline-lg mb-sm">{project.name}</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant max-w-xl mb-md">
+                  {project.description}
+                </p>
+                <div class="flex gap-xs">
+                  {project.tags.map((tag) => (
+                    <span class="px-sm py-1 bg-surface-container border border-outline-variant rounded font-label-sm text-label-sm">{tag}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          );
+        } else {
+          const bgClass = index === 1 ? 'bg-surface-container-low' : 'bg-surface-container-high';
+          const icon = index === 1 ? 'query_stats' : 'integration_instructions';
+          return (
+            <div class={`md:col-span-4 group relative overflow-hidden rounded-xl h-[400px] border border-outline-variant/30 ${bgClass}`}>
+              <div class="p-lg h-full flex flex-col">
+                <div class="mb-auto">
+                  <span class={`material-symbols-outlined text-${isAccent} text-4xl mb-md`}>{icon}</span>
+                  <h3 class="font-headline-md text-headline-md text-on-surface mb-sm">{project.name}</h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant">
+                    {project.description}
+                  </p>
+                </div>
+                <div class="flex flex-wrap gap-xs mt-md">
+                  {project.tags.map((tag) => (
+                    <span class={`px-sm py-1 bg-surface-variant/30 border border-${isAccent}/20 rounded font-label-sm text-label-sm text-${isAccent}`}>{tag}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          );
+        }
+      })}
+    </div>
+  </div>
+</section>
