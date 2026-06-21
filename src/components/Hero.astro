@@ -1,5 +1,6 @@
 ---
 import { getTranslation, type Locale } from "../i18n";
+import { withBase } from "../utils/path";
 
 interface Props {
   locale: Locale;
@@ -38,7 +39,7 @@ const t = getTranslation(locale);
           <img
             class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
             alt="Professional portrait of Keryms Garcia Reyes"
-            src={import.meta.env.BASE_URL + '/profilePortfolio.webp'}
+            src={withBase('profilePortfolio.webp')}
           />
         </div>
         <div class="absolute -bottom-8 -right-8 w-32 h-32 bg-secondary/10 backdrop-blur-md border border-secondary/20 flex flex-col items-center justify-center">
