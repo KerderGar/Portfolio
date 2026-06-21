@@ -52,7 +52,7 @@ export const es = {
       {
         title: "Consultora QA Engineer",
         company: "People Apps",
-        period: "2025 — ACTUALIDAD",
+        period: "2025 — 2026",
         summary: "Liderazgo de QA en aplicaciones empresariales y sistemas gubernamentales bajo metodologías ágiles.",
         highlights: [
           "Pruebas manuales y funcionales alineadas con requerimientos de negocio y estándares UI/UX",

@@ -52,7 +52,7 @@ export const en = {
       {
         title: "QA Engineer Consultant",
         company: "People Apps",
-        period: "2025 — PRESENT",
+        period: "2025 — 20226",
         summary: "Leading QA initiatives across enterprise applications and government systems under Agile methodologies.",
         highlights: [
           "Manual & functional testing aligned with business requirements and UI/UX standards",
