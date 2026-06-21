@@ -27,7 +27,7 @@ const pt = getProjectTranslation(locale);
     <section class="py-xl px-margin-mobile md:px-margin-desktop">
       <div class="max-w-[1280px] mx-auto">
         <!-- Back link -->
-        <a href={`/${locale}/`} class="inline-flex items-center gap-xs text-on-surface-variant hover:text-primary transition-colors mb-lg font-label-md">
+        <a href={`${import.meta.env.BASE_URL}/${locale}/`} class="inline-flex items-center gap-xs text-on-surface-variant hover:text-primary transition-colors mb-lg font-label-md">
           <span class="material-symbols-outlined">arrow_back</span>
           {pt.backToPortfolio}
         </a>

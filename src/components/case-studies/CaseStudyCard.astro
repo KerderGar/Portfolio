@@ -60,7 +60,7 @@ const accentBadge = study.accentColor === "primary" ? "border-primary/30 text-pr
 
     <!-- Link to full page -->
     <div class="mt-auto pt-sm border-t border-outline-variant/20">
-      <a href={`${locale === 'es' ? '/es' : ''}/projects/${study.slug}/`} class={`inline-flex items-center gap-xs font-label-md text-label-md ${accentText} hover:underline transition-all`}>
+      <a href={`${import.meta.env.BASE_URL}${locale === 'es' ? '/es' : ''}/projects/${study.slug}/`} class={`inline-flex items-center gap-xs font-label-md text-label-md ${accentText} hover:underline transition-all`}>
         <span>{pt.viewCaseStudy}</span>
         <span class="material-symbols-outlined text-sm">arrow_forward</span>
       </a>

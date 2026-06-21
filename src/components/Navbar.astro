@@ -8,7 +8,7 @@ interface Props {
 const { locale } = Astro.props;
 const t = getTranslation(locale);
 const otherLang = locale === "en" ? "es" : "en";
-const otherUrl = locale === "en" ? "/es/" : "/en/";
+const otherUrl = locale === "en" ? import.meta.env.BASE_URL + "/es/" : import.meta.env.BASE_URL + "/en/";
 const otherLabel = locale === "en" ? t.lang.es : t.lang.en;
 ---
 
